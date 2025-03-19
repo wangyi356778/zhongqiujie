@@ -1,0 +1,99 @@
+:root {
+    --moon-glow: #fff3e0;
+    --night-sky: #0a2342;
+    --lantern-red: #e74c3c;
+    --gold-yellow: #f1c40f;
+  }
+
+  body {
+    position: relative; /* 必须设置相对定位 */
+    background: url('中秋图片1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 35, 66, 0.85); /* 使用主题色--night-sky */
+    z-index: -1; /* 确保遮罩层在背景图之上、内容之下 */
+  }
+  /* 新增内容样式 */
+  .custom-content {
+    line-height: 1.8;
+    text-align: justify;
+    text-align: center; /* 所有文本内容水平居中 */
+    max-width: 800px; /* 限制内容宽度，避免过长文本影响阅读 */
+    margin: 0 auto; /* 容器自身水平居中 */
+  }
+
+  .custom-content h2 {
+    color: var(--gold-yellow);
+    text-align: center; /* 水平居中 */
+    border-left: none; /* 移除原有的左侧边框 */
+    padding-left: 0; /* 去除左侧内边距 */
+    margin: 2rem auto; /* 上下边距保持，左右自动居中 */
+    text-shadow:
+    1px 1px 2px var(--night-sky),
+    -1px -1px 2px var(--night-sky),
+    1px -1px 2px var(--night-sky),
+    -1px 1px 2px var(--night-sky);
+}
+
+  .custom-content h3 {
+    color: var(--moon-glow);
+    margin: 1.5rem 0 0.8rem;
+    font-size: 1.2em;
+    text-shadow:
+    1px 1px 2px var(--night-sky),
+    -1px -1px 2px var(--night-sky),
+    1px -1px 2px var(--night-sky),
+    -1px 1px 2px var(--night-sky);
+  }
+
+  .historical-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    margin: 1.5rem 0;
+  }
+
+  .custom-list {
+    list-style-type: "🌕";
+    padding-left: 2rem;
+  }
+
+  .custom-list li {
+    padding-left: 0.8rem;
+    margin: 0.8rem 0;
+  }
+
+  .highlight {
+    color: var(--gold-yellow);
+    font-weight: bold;
+    text-shadow:
+    1px 1px 2px var(--night-sky),
+    -1px -1px 2px var(--night-sky),
+    1px -1px 2px var(--night-sky),
+    -1px 1px 2px var(--night-sky);
+  }
+  .button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+@media (max-width: 768px) {
+  .custom-content {
+    font-size: 0.95em;
+  }
+}
+
